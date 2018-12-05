@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EmployeesList.Models.EmployeeForm>
+@{
+    ViewData["Title"] = "ChangeReports";
+}
+
+<h2>ChangeReports</h2>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form asp-action="ChangeReports">
+    EmployeeId <input type="number" name="EmployeeId" value="text" />
+    ReportsToId<input type="number" name="ReportsToId" value="text" />
+    <button>submit</button>
+    </form>
+</body>
+</html>
+

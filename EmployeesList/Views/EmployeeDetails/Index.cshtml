@@ -1,0 +1,72 @@
+﻿@model IEnumerable<EmployeesList.Models.EmployeeForm>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReportsToId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReportsToId)
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+
+        @*<a asp-action="ChangeReport" asp-route="EmployeeDetails/ChangeReports">ChangeReport</a>*@
+
+        @*@Html.ActionLink("Delete","Delete")
+
+        @Html.ActionLink("changereports", "ChangeReports.cshtml")*@
+
+       |
+        <a asp-action="ChangeReports">ChangeReports</a>
+        <a asp-action="Delete">Delete</a>
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
